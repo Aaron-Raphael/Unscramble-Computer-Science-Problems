@@ -20,3 +20,11 @@ Print messages:
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
 
+with open('texts.csv', 'r') as text_rec:
+    text_reader = csv.reader(text_rec)
+
+    # Get and Unpack the first text record
+    (sender, reciever, timestamp) = list(text_reader)[0]
+
+    # Print the output
+    print(f'\nFirst record of texts, {sender} texts {reciever} at time {timestamp}')
