@@ -28,3 +28,12 @@ with open('texts.csv', 'r') as text_rec:
 
     # Print the output
     print(f'\nFirst record of texts, {sender} texts {reciever} at time {timestamp}')
+
+with open('calls.csv', 'r') as call_rec:
+    call_reader = csv.reader(call_rec)
+
+    # Get and Unpack the first text record
+    (caller, reciever, timestamp, seconds) = list(call_reader)[-1]
+
+    # Print the output
+    print(f'\nLast record of calls, {caller} calls {reciever} at time {timestamp}, lasting {seconds} seconds')
