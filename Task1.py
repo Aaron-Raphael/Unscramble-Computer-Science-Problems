@@ -35,3 +35,7 @@ def get_unique_numbers():
             unique_nums.add(record[i])
     
     return len(unique_nums)
+
+result = get_unique_numbers()
+
+print(f"\nThere are {result} different telephone numbers in the records.")
