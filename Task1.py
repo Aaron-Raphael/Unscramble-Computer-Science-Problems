@@ -18,3 +18,20 @@ How many different telephone numbers are there in the records?
 Print a message:
 "There are <count> different telephone numbers in the records."
 """
+# Define function to return number of unique numbers
+def get_unique_numbers():
+
+    # Initialize a set to find unique numbers
+    unique_nums = set()
+
+    # Get combined unique sender and receiver numbers from text.csv
+    for record in texts:
+        for i in (0 , 1):
+            unique_nums.add(record[i])
+
+    # Get combined unique calller and receiver numbers from calls.csv
+    for record in calls:
+        for i in (0 , 1):
+            unique_nums.add(record[i])
+    
+    return len(unique_nums)
