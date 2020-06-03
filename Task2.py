@@ -20,3 +20,15 @@ Print a message:
 September 2016.".
 """
 
+with open('calls.csv', 'r') as call_rec:
+    call_reader = csv.reader(call_rec)
+    call_duration = {}
+
+    for record in list(call_reader):
+
+        # record[0]
+        # record[1]
+        # record[3]
+
+        for i in (0 , 1):
+            call_duration[record[i]] = call_duration[record[i]] + int(record[3]) if record[i] in call_duration else int(record[3])
