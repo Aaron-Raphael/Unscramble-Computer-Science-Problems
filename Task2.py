@@ -35,3 +35,6 @@ with open('calls.csv', 'r') as call_rec:
 
 # Find phone number of maximum call duration
 maxCallNum = max(call_duration, key= lambda x: call_duration[x])
+
+# Print output
+print(f'\n{maxCallNum} spent the longest time, {call_duration[maxCallNum]} seconds, on the phone during September 2016.')
