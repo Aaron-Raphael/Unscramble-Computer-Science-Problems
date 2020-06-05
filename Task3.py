@@ -43,6 +43,15 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+def number_type(ph_number):
+    if ph_number[:5] == '(080)':
+        return 'bangalore'
+    elif ph_number[:3] == '140':
+        return 'telemarketer'
+    elif ph_number[:1] in ['7', '8', '9']:
+        return 'mobile_number'
+    else:
+        return 'fixed_lines'
 
 def area_code(calls):
     receiver_list = []
