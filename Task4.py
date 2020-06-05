@@ -3,7 +3,7 @@ Read file into texts and calls.
 It's ok if you don't understand how to read files.
 """
 import csv
-
+"""
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
@@ -12,7 +12,7 @@ with open('calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
-"""
+
 TASK 4:
 The telephone company want to identify numbers that might be doing
 telephone marketing. Create a set of possible telemarketers:
@@ -39,7 +39,8 @@ def telemarketers(calls, texts):
  
     is_telemarketers -= not_telemarketer  
     return sorted(is_telemarketers)
-    
+
+
 with open('texts.csv', 'r') as text_rec:
     text_reader = csv.reader(text_rec)
     texts = list(text_reader)
