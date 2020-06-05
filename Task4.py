@@ -24,6 +24,22 @@ Print a message:
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
+
+def telemarketers(calls, texts): 
+    is_telemarketers = set()
+    not_telemarketer = set()
+
+    for record in texts:
+        for i in (0 , 1):
+            not_telemarketer.add(record[i])
+
+    for record in calls:
+        is_telemarketers.add(record[0])
+        not_telemarketer.add(record[1])
+ 
+    is_telemarketers -= not_telemarketer  
+    return sorted(is_telemarketers)
+    
 with open('texts.csv', 'r') as text_rec:
     text_reader = csv.reader(text_rec)
     texts = list(text_reader)
