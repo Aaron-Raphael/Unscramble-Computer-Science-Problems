@@ -24,4 +24,17 @@ Print a message:
 <list of numbers>
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
+with open('texts.csv', 'r') as text_rec:
+    text_reader = csv.reader(text_rec)
+    texts = list(text_reader)
+    
+    with open('calls.csv', 'r') as call_rec:
+        call_reader = csv.reader(call_rec)
+        calls = list(call_reader)
 
+        tm_numbers = telemarketers(calls, texts)
+
+# Print output
+print("These numbers could be telemarketers: ")
+for number in tm_numbers:
+    print('\t' + number)
