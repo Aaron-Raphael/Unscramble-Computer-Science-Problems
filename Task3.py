@@ -76,6 +76,25 @@ def area_code(calls):
     
     return codes
 
+def from_to_percent(calls):
+    from_count = 0         
+    to_count = 0
+
+    for call in calls:
+        caller, receiver = call[0], call[1]
+        caller_type = number_type(caller)
+        receiver_type = number_type(receiver)
+
+        if caller_type == 'bangalore':
+            from_count += 1             # counter 
+
+        if caller_type == 'bangalore' and receiver_type == 'bangalore': 
+            to_count += 1   # counter 
+    
+    answer = to_count / from_count * 100
+    percent = round(answer, 2)
+    return percent
+
 with open('calls.csv', 'r') as call_rec:
     call_reader = csv.reader(call_rec)
     calls = list(call_reader)
