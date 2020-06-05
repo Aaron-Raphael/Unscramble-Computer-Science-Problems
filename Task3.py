@@ -43,3 +43,18 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+with open('calls.csv', 'r') as call_rec:
+    call_reader = csv.reader(call_rec)
+    calls = list(call_reader)
+
+    codes = sorted(set(area_code(calls)))
+    
+    percent = from_to_percent(calls)
+
+# Part A:
+print('The numbers called by people in Bangalore have codes:')
+for area_code in codes:
+    print('\t' + area_code)
+
+# Part B:
+print(f'\n{percent} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.')
