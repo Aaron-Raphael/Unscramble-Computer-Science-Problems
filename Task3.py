@@ -43,6 +43,30 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+
+def area_code(calls):
+    receiver_list = []
+    codes = []  
+    
+    for call in calls:
+        (caller, receiver) = call[:2]
+        caller_type = number_type(caller)
+
+        if caller_type == 'bangalore':
+            receiver_list.append(receiver)
+          
+    for ph_number in receiver_list:
+        if number_type(ph_number) == 'bangalore': 
+            codes.append(ph_number[1:4])
+        elif number_type(ph_number) == 'telemarketer': 
+            codes.append(ph_number[:3])
+        elif number_type(ph_number) == 'fixed_lines': 
+            codes.append(ph_number.split('(', 1)[1].split(')')[0])
+        else:
+            codes.append(ph_number[:4]) # mobile: first 4 digits
+    
+    return codes
+
 with open('calls.csv', 'r') as call_rec:
     call_reader = csv.reader(call_rec)
     calls = list(call_reader)
