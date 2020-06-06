@@ -5,3 +5,9 @@ Task 0:
 
         O(1)
 The execution time is independent of the input data.
+
+
+Task 1: 
+
+        O(n)
+The execution time is directly proportional to the input data.
