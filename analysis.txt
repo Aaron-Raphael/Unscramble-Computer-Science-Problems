@@ -11,3 +11,9 @@ Task 1:
 
         O(n)
 The execution time is directly proportional to the input data.
+
+
+Task 2: 
+
+        O(n)
+The execution time is directly proportional to the input data.
