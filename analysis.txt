@@ -17,3 +17,13 @@ Task 2:
 
         O(n)
 The execution time is directly proportional to the input data.
+
+
+Task 3: 
+
+    Part A:     O(n log n)
+The execution time for part of the code is directly proportional to the input data.
+The sort function has a complexity of O(n log n)
+
+    Part B:     O(n)
+The execution time is directly proportional to the input data. 
