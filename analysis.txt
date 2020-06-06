@@ -1,0 +1,7 @@
+Big O Notation
+
+
+Task 0: 
+
+        O(1)
+The execution time is independent of the input data.
